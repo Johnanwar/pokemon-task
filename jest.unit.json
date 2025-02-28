@@ -1,0 +1,36 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "jsdom",
+  "coverageDirectory": "./coverage",
+  "reporters": [
+    "default",
+    ["jest-junit", { "outputDirectory": "./coverage/junit", "outputName": "jest-results.xml" }]
+  ],
+  "testMatch": [
+    "**/?(*.)+(test).ts",
+    "**/?(*.)+(test).tsx"
+  ],
+  "transform": {
+    "^.+\\.(ts|tsx)?$": "ts-jest"
+  },
+  "resetMocks": false,
+  "clearMocks": false,
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "./src/features/**",
+    "./src/services/**",
+    "./src/store/**",
+    "!**/*.test.ts",
+    "!**/*.test.tsx"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "lines": 0
+    }
+  },
+  "moduleNameMapper": {
+    "^.+\\.(css|less|scss)$": "identity-obj-proxy"
+  },
+ 
+  "setupFilesAfterEnv": ["<rootDir>/jest.setup.js"]
+}

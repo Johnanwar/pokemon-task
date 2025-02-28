@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { useGetPokemonByIdQuery } from "../../../services/query";
+import { useGetPokemonByIdQuery } from "../../services/query";
 
 const PokemonDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();

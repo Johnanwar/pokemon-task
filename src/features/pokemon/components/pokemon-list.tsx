@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PokemonCard from "./pokemon-card";
-import { useGetPokemonQuery } from "../../../services/query";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { useGetPokemonQuery } from "../../services/query";
 
 
 const PokemonList: React.FC = () => {

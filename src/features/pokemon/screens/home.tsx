@@ -1,4 +1,3 @@
-import React from 'react'
 import PokemonList from '../components/pokemon-list'
 
 function Home() {
